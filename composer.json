@@ -6,9 +6,11 @@
     
     "require": {
         "php": ">=5.3"
-    }, 
-    "autoload": {
-        "files": ["szablon/szablon.php"]
+    },
+    "autoload": {         
+          "psr-0": { "Poznet\\Szablon": "src" }
+         
+         
     }
 
 }
