@@ -55,7 +55,7 @@ class szablon {
     }
 
     public function pokaz() {
-        $this->show();
+       return $this->show();
     }
 
 
