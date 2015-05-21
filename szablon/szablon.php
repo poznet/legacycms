@@ -4,8 +4,7 @@
   *
   * Klasa  zarządzająca templatami
   */
-
-namespace poznet\szablon;
+ 
 
 class szablon {
 
