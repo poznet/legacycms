@@ -1,0 +1,11 @@
+{
+    "name": "poznet/szablon",
+    "description": "Legacy simple template engine",
+    "homepage": "https://github.com/poznet/szablon",
+    "version": "0.0.1",
+    
+    "require": {
+        "php": ">=5.3"
+    } 
+
+}
