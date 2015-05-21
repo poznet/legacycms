@@ -5,7 +5,7 @@
   * Klasa  zarządzająca templatami
   */
  
-namespace PoznetSzablon;
+namespace Poznet\Szablon;
 
 class Szablon {
 
