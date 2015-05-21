@@ -5,14 +5,16 @@
   * Klasa  zarządzająca templatami
   */
 
-class Szablon {
+namespace poznet\szablon;
+
+class szablon {
 
 
     private $szablon;
     private $data = array();
     private $plik_szablonu;
 
-    public function szablon($nazwa,$lang=false,$admin=false) {
+    public function __construct($nazwa,$lang=false,$admin=false) {
          
         if (!$lang) {
             $this->szablon = 'tpl/' . $nazwa;
