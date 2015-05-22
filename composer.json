@@ -1,7 +1,7 @@
 {
-    "name": "poznet/szablon",
-    "description": "Legacy simple template engine",
-    "homepage": "https://github.com/poznet/szablon",
+    "name": "poznet/legacycms",
+    "description": "Legacy simple cms  for legacy projects ",
+    "homepage": "https://github.com/poznet/legacycms",
     "version": "0.0.1",
     
     "require": {
