@@ -1,7 +1,8 @@
-# szablon  
-**Szablon**
-Simple template  engine for legacy projects .
+# Legacy CMS
 
+Simple legacy  CMS form  old projects 
+
+**Szablon**
 Usage: 
 
 1.Create  object,  with template file as constructor  parametr 
