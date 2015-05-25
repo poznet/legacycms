@@ -1,11 +1,14 @@
 # Legacy CMS
 
-Simple legacy  CMS form  old projects 
+##Simple legacy  CMS for  old projects 
 
 Modules :
 
-- Szablon - simple  template engine
-- Config - Configuration(textfiles based) mangament 
+- [Szablon](docs/szablon.md) - simple  template engine
+- [Config](docs/config.md) - Configuration(textfiles based) mangament 
+
+
+
 
 
 
