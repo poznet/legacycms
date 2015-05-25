@@ -14,10 +14,15 @@ class Szablon {
     private $data = array();
     private $plik_szablonu;
 
-    public function __construct($nazwa,$lang=false,$admin=false) {
+    public function __construct($nazwa,$lang=false,$admin=false,$test=false) {
          
         if (!$lang) {
-            $this->szablon = 'tpl/' . $nazwa;
+            if($test){
+                //na potrzeby phpunit
+                 $this->szablon = 'tests/tpl/' . $nazwa;                
+            }else{
+                 $this->szablon = 'tpl/' . $nazwa;
+            }
         } else {
             
             if (!file_exists('tpl_lang/' . $lang . '_' . $nazwa)) {
@@ -33,6 +38,11 @@ class Szablon {
         }
          
     }
+
+    public function getSzblonName() {
+       return $this->szablon;
+    }
+
     
     public function __toString(){
     	return $this->show();
@@ -59,7 +69,9 @@ class Szablon {
        return $this->show();
     }
 
+   
 
+     
 
 
     
