@@ -8,3 +8,6 @@ Modules :
 - Config - Configuration(textfiles based) mangament 
 
 
+
+
+[![Build Status](https://travis-ci.org/poznet/legacycms.svg?branch=master)](https://travis-ci.org/poznet/legacycms)
