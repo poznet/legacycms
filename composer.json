@@ -5,7 +5,8 @@
     "version": "0.0.1",
     
     "require": {
-        "php": ">=5.3"
+        "php": ">=5.3",
+        "phpunit/phpunit": "3.7.14"
     },
     "autoload": {         
           "psr-0": { 
