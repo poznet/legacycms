@@ -11,9 +11,19 @@ class Config{
 	private $configpath;
 	private $config=array();
 	
-	public function __construct(){
+	public function __construct($test=false){
+                            if($test){
+                                //inicjalizacja zmiennej sesyjnej dla  phpunit
+                                if ( !isset( $_SESSION ) ) $_SESSION = array(  );
+                            }
+            
 		$this->unregisterConfig();
-		$this->configpath=$_SESSION['apppath'].'cfg/config/';
+                            if($test){
+                                $this->configpath='tests/files/config/';    
+                            }else{
+                                $this->configpath=$_SESSION['apppath'].'cfg/config/';    
+                            }
+		
 		$this->loadConfig();
 		//$this->registerConfig();
 	}
@@ -29,7 +39,7 @@ class Config{
      		for($i=0;$i<$ile;$i++){
      		 	$tab=explode("=",$plik[$i]);
      		 	if($tab[0]!='')
-      			@$this->config[trim($tab[0])]=trim($tab[1]);
+      			@$this->config[trim($tab[0])]=  strtoupper(trim($tab[1]));
 
       		    }
         	}

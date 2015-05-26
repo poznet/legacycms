@@ -19,7 +19,7 @@ class Szablon {
         if (!$lang) {
             if($test){
                 //na potrzeby phpunit
-                 $this->szablon = 'tests/tpl/' . $nazwa;                
+                 $this->szablon = 'tests/files/tpl/' . $nazwa;                
             }else{
                  $this->szablon = 'tpl/' . $nazwa;
             }

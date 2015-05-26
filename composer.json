@@ -11,7 +11,8 @@
     "autoload": {         
           "psr-0": { 
               "Poznet\\Szablon": "src" ,
-              "Poznet\\Config": "src" 
+              "Poznet\\Config": "src" ,
+              "Poznet\\Slajdy": "src" 
               }
          
          
