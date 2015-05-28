@@ -13,4 +13,4 @@ Modules :
 
 
 
-[![Build Status](https://travis-ci.org/poznet/legacycms.svg?branch=master)](https://travis-ci.org/poznet/legacycms)
+[![Build Status](https://travis-ci.org/poznet/legacycms.svg?branch=master)](https://travis-ci.org/poznet/legacycms) [![Code Climate](https://codeclimate.com/github/poznet/legacycms/badges/gpa.svg)](https://codeclimate.com/github/poznet/legacycms)
