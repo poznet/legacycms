@@ -20,11 +20,11 @@ use Poznet\Szablon;
  		$this->kat=$katalog;
 		$kat=opendir($_SESSION['apppath'].$katalog);
 
- 		while($n=@readdir($kat)){
-			if(($n!='..')&&($n!='.')&&($n!='')){
+ 		while($nazwa=@readdir($kat)){
+			if(($nazwa!='..')&&($nazwa!='.')&&($nazwa!='')){
 
-				if(!is_dir($_SESSION['apppath'].$katalog.'/'.$n))
-			    array_push($this->slajdy,$n);
+				if(!is_dir($_SESSION['apppath'].$katalog.'/'.$nazwa))
+			    array_push($this->slajdy,$nazwa);
 			}
 		}
 	}

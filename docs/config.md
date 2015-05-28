@@ -26,6 +26,7 @@ $value4=$confg->check('BOOL2'); //return false
 ```
 
 get ()  retun values of parameter.
+
 check() check if value is  'TAK' - if yes return true.
 
 [Back to index](../README.md)

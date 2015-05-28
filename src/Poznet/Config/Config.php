@@ -31,15 +31,15 @@ class Config{
 	//laduje  konfiguracje  z plikow
 	public function loadConfig(){
 		$kat=opendir($this->configpath);
-		while($n=  readdir($kat)){
-    		if(substr($n,-3)=='cfg'){
-     		$plik=file($this->configpath.$n);    
+		while($nazwa=  readdir($kat)){
+    		if(substr($nazwa,-3)=='cfg'){
+     		$plik=file($this->configpath.$nazwa);    
      		$ile=count($plik);
      
      		for($i=0;$i<$ile;$i++){
      		 	$tab=explode("=",$plik[$i]);
      		 	if($tab[0]!='')
-      			@$this->config[trim($tab[0])]=  strtoupper(trim($tab[1]));
+      			$this->config[trim($tab[0])]=  strtoupper(trim($tab[1]));
 
       		    }
         	}
