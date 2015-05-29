@@ -13,7 +13,7 @@ use Poznet\Szablon;
 
  	private $slajdy=array();
  	private $kat;
- 	public $fistactive=true;
+ 	private $fistactive=true;
 
 
  	public function __construct($katalog){
@@ -31,8 +31,8 @@ use Poznet\Szablon;
 	public function getSlajd($file,$plik='slajd.tpl',$act=false){
 		$tpl=new Szablon($plik);
 		$tpl->dodaj('plik',$file);
-		if($act)
-			$tpl->dodaj('active',' active');
+		if($act)   //for jcarouser  
+                            $tpl->dodaj('active',' active');
 		return $tpl->pokaz();
 	}
 	public function show($plik='slajdy.tpl',$plik2='slajd.tpl'){
@@ -60,9 +60,19 @@ use Poznet\Szablon;
 
 	}
         
+              public  function setFirstactive($bool) {
+                  $this->firstactive=$bool;                  
+              }
+              public  function getFirstactive() {
+                  return $this->firstactive;                  
+              }
+        //-------------------------------------------------------------
+        //                        LEGACY NAME 
               public function getSlajdy($plik='slajdy.tpl',$plik2='slajd.tpl'){
                   return $this->show($plik,$plik2);
               }
+              
+              
         
                
  }
