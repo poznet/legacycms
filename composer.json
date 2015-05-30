@@ -6,7 +6,8 @@
     
     "require": {
         "php": ">=5.3",
-        "phpunit/phpunit": "3.7.14"
+        "phpunit/phpunit": "3.7.14",
+        "matthiasmullie/minify":"*"
     },
     "autoload": {         
           "psr-0": { 
