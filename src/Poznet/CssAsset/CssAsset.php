@@ -6,6 +6,8 @@
  * and open the template in the editor.
  */
 namespace Poznet\CssAsset;
+
+use MatthiasMullie\Minify;
 /**
  * Description of CssAsset
  *
@@ -15,11 +17,15 @@ class CssAsset {
     private $maintpl='tpl/main.tpl';
     private $css=array();
     private $output='css/outpt/all.css';
+    private $minoutput='css/outpt/all.min.css';
     
     public function __construct() {
         $plik=file_get_contents($this->maintpl);
         $css=$this->findcss($plik);
         $this->saveOutput($css);
+        $minifier = new Minify\CSS($this->output);
+        $minifier->minify($this->minoutput);
+        
     }
     
     public function findcss($txt){
