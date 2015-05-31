@@ -14,17 +14,20 @@ use MatthiasMullie\Minify;
  * @author michalg
  */
 class CssAsset {
+    private $path;
     private $maintpl='tpl/main.tpl';
     private $css=array();
-    private $output='css/outpt/all.css';
-    private $minoutput='css/outpt/all.min.css';
+    private $output='css/output/all.css';
+    private $minoutput='css/output/all.min.css';
     
     public function __construct() {
+        $this->path=__DIR__ .'../../../../../../../';
         $plik=file_get_contents($this->maintpl);
-        $css=$this->findcss($plik);
+        $this->findcss($plik);
+        $css=$this->combine();
         $this->saveOutput($css);
-        $minifier = new Minify\CSS($this->output);
-        $minifier->minify($this->minoutput);
+        $minifier = new Minify\CSS($this->path.$this->output);
+        $minifier->minify($this->path.$this->minoutput);
         
     }
     
@@ -36,13 +39,13 @@ class CssAsset {
         $txt='';
         $ile=count($this->css);
         for($i=0;$i<$ile;$i++){
-            $txt.=file_get_contents($this->css[$i]);
+           $txt.=file_get_contents($this->path.$this->css[$i][1]);
         }
         return $txt;
     }
     
     public function saveOutput($txt){
-        file_put_contents($this->output, $txt );
+        file_put_contents($this->path.$this->output, $txt );
     }
     
     
