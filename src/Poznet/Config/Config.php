@@ -9,11 +9,12 @@ namespace Poznet\Config;
 
 class Config{
               
-              private $path=__DIR__ .'../../../../../../../';
+              private $path;
 	private $configpath;
 	private $config=array();
 	
 	public function __construct($test=false){
+                            $this->path=__DIR__ .'../../../../../../../';
                             if($test){
                                 //inicjalizacja zmiennej sesyjnej dla  phpunit
                                 if ( !isset( $_SESSION ) ) $_SESSION = array(  );
