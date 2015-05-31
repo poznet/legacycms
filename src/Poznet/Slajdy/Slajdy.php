@@ -11,19 +11,21 @@ use Poznet\Szablon;
 
  class Slajdy{
 
+              private $path;
  	private $slajdy=array();
  	private $kat;
  	private $fistactive=true;
 
 
  	public function __construct($katalog){
+                            $this->path=__DIR__ .'../../../../../../../';
  		$this->kat=$katalog;
-		$kat=opendir($_SESSION['apppath'].$katalog);
+		$kat=opendir($this->path.$katalog);
 
  		while($nazwa=@readdir($kat)){
 			if(($nazwa!='..')&&($nazwa!='.')&&($nazwa!='')){
 
-				if(!is_dir($_SESSION['apppath'].$katalog.'/'.$nazwa))
+				if(!is_dir($this->path.$katalog.'/'.$nazwa))
 			    array_push($this->slajdy,$nazwa);
 			}
 		}
