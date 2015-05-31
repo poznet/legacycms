@@ -8,6 +8,8 @@
 namespace Poznet\Config;
 
 class Config{
+              
+              private $path=__DIR__ .'../../../../../../../';
 	private $configpath;
 	private $config=array();
 	
@@ -21,7 +23,7 @@ class Config{
                             if($test){
                                 $this->configpath='tests/files/config/';    
                             }else{
-                                $this->configpath=$_SESSION['apppath'].'cfg/config/';    
+                                $this->configpath=  $this->path.'cfg/config/';    
                             }
 		
 		$this->loadConfig();
@@ -81,27 +83,7 @@ class Config{
 		return $this->config[$x];
 	}
 
-	public function install(){
-		$klasy=array();
-		$kat=opendir($_SESSION['apppath'].'clases');
-		while($n=readdir($kat)){
-			if(substr($n,-3)=='php')
-					if($n!='config.php')
-				array_push($klasy,substr($n,0,-4));
-		}
-		closedir($kat);
-
-		$ile=count($klasy);
-		for($i=0;$i<$ile;$i++){
-			echo '<b>'.$klasy[$i].'</b>';
-			 $r = new $klasy[$i]();
-			 if( method_exists($r,'install'))
-			$r->install();
-		echo '<br>'	;
-		}
-
-		return true;
-	}
+ 
  
 
 }
