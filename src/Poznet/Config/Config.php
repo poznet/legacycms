@@ -20,7 +20,7 @@ class Config{
                                 if ( !isset( $_SESSION ) ) $_SESSION = array(  );
                             }
             
-		$this->unregisterConfig();
+	//	$this->unregisterConfig();
                             if($test){
                                 $this->configpath='tests/files/config/';    
                             }else{
